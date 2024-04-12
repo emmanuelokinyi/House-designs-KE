@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "nice house",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_lvx-evZPLZlDvKShU1Ka0arATCULpVJkRAvYq6hwQlnPGYgjt5y8L28tQmkYyABf8aY&usqp=CAU  ",
+      "views": 200,
+      "description": "This is a beautiful home"
+    },
+    {
+      "id": "2",
+      "title": "serene environment",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw43FnwW4wrS18Gc1QS6PIp6YsYpoUWl2few&s",
+      "views": 200,
+      "description": "This one is cost friendly "
+    },
+    {
+      "title": "the best home",
+      "img": "http://cdn.pixabay.com/photo/2024/01/31/14/04/farm-house-8544194_1280.jpg",
+      "views": "100",
+      "description": "This i a beautiful urban home",
+      "id": "3"
+    }
+  
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": null
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": null
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

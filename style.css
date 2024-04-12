@@ -1,0 +1,27 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+body>* {
+  padding: 0.5em;
+  margin: 2px;
+}
+
+main:hover {
+  padding-bottom: 9%;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
