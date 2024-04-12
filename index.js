@@ -30,9 +30,34 @@ function deletePost(id){
   .then((data)=> data.json() )
   .then((posts)=>{
     displayPosts(posts)
+    .then((response)=>{
+    alert("Post deleted successfully")
+})
     
   })
 }
+
+
+//adding new post
+document.getElementById("Posting").addEventListener("submit",(event)=>{
+    event.preventDefault()
+    const  title = document.getElementById("title").value
+    const  image= document.getElementById("image").value
+    const  description = document.getElementById("description").value
+
+    console.log(title, image, description)
+
+    fetch("http://localhost:3000/posts",{
+        method: "POST",
+        headers :{"Content-Type": "application/json"},
+        body:JSON.stringify({title: title, img: image, description: description})
+    })
+.then((data)=>  data.json( )  )
+.then((response)=>{
+    alert("Post added successfully")
+})
+})
+
 
   
 
