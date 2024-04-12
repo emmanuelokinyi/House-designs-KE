@@ -72,8 +72,8 @@ document.getElementById("Posting").addEventListener("submit",(event)=>{
                 console.log(post)
                     const updatePost =document.getElementById("updatePost")
                     updatePost.innerHTML =`
-                    <h1 class="flex justify-between">Edit post here</>
-                     <form id="Posting" class="max-w-md bg-gray-200 gap-4 mx-auto">
+                    <h1 class="mx-auto gap-4 font-semibold text-centre max-w-md">Edit post here</h1>
+                     <form id="updatePost" class="max-w-md bg-gray-200 gap-4 mx-auto">
                     <div class="relative z-0 w-full mb-5 group">
                         <input value="${post.title}" name="Title" id="title" class="block py-2.5 px-0 w-full text-sm text-grey-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-900 dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
                         <label for="Add-title" class="peer-focus:font-medium absolute text-sm text-gray-700 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Title</label>
