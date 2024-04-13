@@ -1,4 +1,4 @@
-fetch("http://localhost:5000/posts")
+fetch("https://house-design-ke-2024.onrender.com/posts")
 .then((data) => data.json()  )
 .then((posts) =>{
   displayPosts(posts) 
@@ -29,7 +29,7 @@ function scrollToSection(updatePost) {
 
 // deleting a post
 function deletePost(id){
-  fetch(`http://localhost:5000/posts/${id}`, {
+  fetch(`https://house-design-ke-2024.onrender.com/posts/${id}`, {
     method: "DELETE"
   })
   .then((data)=> data.json() )
@@ -52,7 +52,7 @@ document.getElementById("Posting").addEventListener("submit",(event)=>{
 
     console.log(title, image, description)
 
-    fetch("http://localhost:5000/posts",{
+    fetch("https://house-design-ke-2024.onrender.com/posts",{
         method: "POST",
         headers :{"Content-Type": "application/json"},
         body:JSON.stringify({title: title, img: image, description: description})
@@ -66,7 +66,7 @@ document.getElementById("Posting").addEventListener("submit",(event)=>{
 
 // updating a post
     function updatePost(id){
-        fetch(`http://localhost:5000/posts/${id}`)
+        fetch(`https://house-design-ke-2024.onrender.com/posts/${id}`)
         .then((data)=>  data.json( ))
         .then((posts)=>{
                 console.log(post)
@@ -106,7 +106,7 @@ document.getElementById("Posting").addEventListener("submit",(event)=>{
 
     console.log(title, image, description)
 
-    fetch(`http://localhost:5000/posts/${id}`,{
+    fetch(`https://house-design-ke-2024.onrender.com/posts/${id}`,{
         method: "PATCH",
         headers :{"Content-Type": "application/json"},
         body:JSON.stringify({title: title, img: image, description: description})
