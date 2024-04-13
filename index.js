@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/posts")
+fetch("http://localhost:5000/posts")
 .then((data) => data.json()  )
 .then((posts) =>{
   displayPosts(posts) 
@@ -29,7 +29,7 @@ function scrollToSection(updatePost) {
 
 // deleting a post
 function deletePost(id){
-  fetch(`http://localhost:3000/posts/${id}`, {
+  fetch(`http://localhost:5000/posts/${id}`, {
     method: "DELETE"
   })
   .then((data)=> data.json() )
@@ -52,7 +52,7 @@ document.getElementById("Posting").addEventListener("submit",(event)=>{
 
     console.log(title, image, description)
 
-    fetch("http://localhost:3000/posts",{
+    fetch("http://localhost:5000/posts",{
         method: "POST",
         headers :{"Content-Type": "application/json"},
         body:JSON.stringify({title: title, img: image, description: description})
@@ -66,13 +66,13 @@ document.getElementById("Posting").addEventListener("submit",(event)=>{
 
 // updating a post
     function updatePost(id){
-        fetch(`http://localhost:3000/posts/${id}`)
+        fetch(`http://localhost:5000/posts/${id}`)
         .then((data)=>  data.json( ))
         .then((posts)=>{
                 console.log(post)
                     const updatePost =document.getElementById("updatePost")
                     updatePost.innerHTML =`
-                    <h1 class="mx-auto gap-4 font-semibold text-centre max-w-md">Edit post here</h1>
+                    <h1 class="mx-auto gap-4 font-semibold text-center max-w-md">Edit post here</h1>
                      <form id="updatePost" class="max-w-md bg-gray-200 gap-4 mx-auto">
                     <div class="relative z-0 w-full mb-5 group">
                         <input value="${post.title}" name="Title" id="title" class="block py-2.5 px-0 w-full text-sm text-grey-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-900 dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
@@ -106,7 +106,7 @@ document.getElementById("Posting").addEventListener("submit",(event)=>{
 
     console.log(title, image, description)
 
-    fetch(`http://localhost:3000/posts/${id}`,{
+    fetch(`http://localhost:5000/posts/${id}`,{
         method: "PATCH",
         headers :{"Content-Type": "application/json"},
         body:JSON.stringify({title: title, img: image, description: description})
